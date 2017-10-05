@@ -1,7 +1,7 @@
 /******************************************************************************
  *  Compilation:  javac -d . Util.java
  *  
- *  Purpose: To Calculate Euclidean distance
+ *  Purpose: To perform different functionality
  *
  *  @author  Shritej
  *  @version 1.0
@@ -193,10 +193,53 @@ public class Util {
 	public static double temperatureConversionC(double temperature) {
 		return (temperature-32)*5/9;
 	}
+	public static double monthlyPayment(double principal,double year,double rate) {
+		double month=12*year;
+		double rateOf=rate/(100*12);
+		double payment=(principal*rateOf)/(1-Math.pow(1+rateOf,-month));
+		return payment;
+	}
+	public static double sqrt(double number) {
+		double t=number;
+		double epsilon=1e-15;
+		t=(number/t+t)/2;
+		while(Math.abs(t - number/t) > epsilon*t) {
+				t=(number/t+t)/2;
+		
+		}
+		return t;
+	
+	}
+	public static String toBinary(int number) {
+		String binary="";
+		int num=0;
+		while(number!=0) {
+			if(number%2==0) {
+				binary="0"+binary;
+				num=num*10+0;
+			}
+			else {
+			
+				binary="1"+binary;
+				num=num*10+1;
+			}
+				number=number/2;
+		
+		}
+			System.out.println("nume"+num);
+		return binary;
+	
+	}
 	public static void main(String args[]) {
 	dayOfWeek(10,5,2017);
 	System.out.println(temperatureConversionF(36));
 	System.out.println(temperatureConversionC(98));
+	System.out.println("payment="+monthlyPayment(1000,0.6,10));
+
+	System.out.println("sqrt "+sqrt(35));
+	System.out.println("Binary "+toBinary(5));
+	String str=toBinary(32);
+	System.out.println("Dec "+str.charAt(0));
 	}
 	
 }
