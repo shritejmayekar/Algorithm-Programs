@@ -26,6 +26,7 @@ public class TemperatureConversion {
 		System.out.println("Celcius to Fahrenheit:"+Util.temperatureConversionF(scanner.nextDouble()));
 		System.out.println("Enter temperature in Fahrenheit:");
 		System.out.println("Fahrenheit to Celcius:"+Util.temperatureConversionC(scanner.nextDouble()));
+		scanner.close();
 	}
 
 }

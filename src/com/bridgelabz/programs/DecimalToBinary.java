@@ -12,6 +12,7 @@ public class DecimalToBinary {
 		System.out.println("please enter the decimal number:");
 		binary=Util.toBinary(scanner.nextInt());
 		System.out.println("The binary number is "+binary);
+		scanner.close();
 	}
 
 }

@@ -26,7 +26,7 @@ public class MonthlyPayment {
 		System.out.println("please enter the Principal ,rate of interate and no. of years:");
 		mothlyPayment=Util.monthlyPayment(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());
 		System.out.println("The monthly payment="+mothlyPayment);
-
+		scanner.close();
 	}
 
 }

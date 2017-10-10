@@ -33,7 +33,7 @@ public class BubbleSort {
 		for (int i = 0; i < unSortedarray.length; i++) {
 			System.out.print(unSortedarray[i]+" ");
 		}
-		
+		scanner.close();
 
 	}
 

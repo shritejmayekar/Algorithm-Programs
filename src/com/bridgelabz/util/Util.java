@@ -314,10 +314,43 @@ public static int reverseNumber(int number) {
 				number=number/2;
 		
 		}
-			
+		swapNimble(binary);	
 		return binary;
 	
 	}
+	public static void printBinaryTodecimal(int[] binaryArrray) {
+		int sum=0,bit=7;
+		for(int i=0;i<binaryArrray.length;i++) {
+			if(binaryArrray[i]==1) {
+				sum=(int) (sum+Math.pow(2, bit));
+			}
+			bit--;
+			
+		}
+		System.out.println("The decimal number="+sum);
+	}
+	public static void swapNimble(String binary) {
+		int[] binaryBitArray=new int[8];
+		int[] swapNimbelArray=new int[8];
+		
+		for(int i=0;i<binary.length();i++) {
+			if(binary.charAt(i)=='1')
+				binaryBitArray[binaryBitArray.length-binary.length()+i]=1;
+				else
+				binaryBitArray[binaryBitArray.length-binary.length()+i]=0;
+		}	
+		printBinaryTodecimal(binaryBitArray);
+		for(int i=0;i<binaryBitArray.length;i++) {
+			if(i<4)
+				swapNimbelArray[i]=binaryBitArray[4+i]; 
+			else
+				swapNimbelArray[i]=binaryBitArray[i-4];
+		}
+		printBinaryTodecimal(swapNimbelArray);
+		
+	}
+	
+	
 /**
  * randomGenerator generates random number
  * @return

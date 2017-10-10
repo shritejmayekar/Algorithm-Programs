@@ -26,7 +26,7 @@ public class SqureRoot {
 		squareRoot=Util.sqrt(scanner.nextDouble());
 		
 		System.out.println("The squareroot is "+squareRoot);
-
+		scanner.close();
 	}
 
 }

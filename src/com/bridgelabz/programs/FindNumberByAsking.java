@@ -19,17 +19,19 @@ import java.util.Scanner;
 
 import com.bridgelabz.util.Utility;
 public class FindNumberByAsking{
-	public static int numberN;
+	public static int number;
 	
 	
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
 		
 		
-			System.out.print("Enter the number:");
-			numberN=scanner.nextInt();
-			Utility.binarySearch(0,(int)Math.pow(2, 10), numberN);
 		
+			number=Integer.parseInt(args[0]);
+			System.out.println("Guess number between o to "+(Math.pow(2, number)-1));
+			int value=scanner.nextInt();
+			Utility.binarySearch(0,(int)Math.pow(2,number),value);
+			scanner.close();
 	}
 
 }

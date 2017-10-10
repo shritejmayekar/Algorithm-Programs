@@ -21,9 +21,10 @@ import com.bridgelabz.util.Util;
 public class PrimeNumber {
 
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
+		Scanner scanner=new Scanner(System.in);
 		System.out.println("Please specify range:");
-		Util.primeNumber(0, sc.nextInt());
+		Util.primeNumber(0, scanner.nextInt());
+		scanner.close();
 	}
 
 }

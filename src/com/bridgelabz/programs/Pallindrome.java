@@ -36,6 +36,7 @@ public class Pallindrome {
 		catch(Exception exception) {
 			System.out.println("Exception:"+exception);
 		}
+		scanner.close();
 	}
 
 }

@@ -34,7 +34,7 @@ public class InsertionSort {
 		}
 		
 		
-
+		scanner.close();
 	}
 
 }

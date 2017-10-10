@@ -15,12 +15,11 @@
 package com.bridgelabz.programs;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
+
 import java.util.Scanner;
 
 import com.bridgelabz.util.Utility;
@@ -29,7 +28,7 @@ public class BinarySearchWordListFile {
 	public static Scanner scanner=new Scanner(System.in);
 	public static String[] fileArrayContent=new String[5];
 	public static int sizeOfArray,position;
-	public static String readFileContent;
+	public static String readFileContent,readFile;
 	public static void main(String[] args) throws IOException {
 		File file=new File("demo.txt");
 		FileWriter fileWriter=new FileWriter(file);
@@ -48,12 +47,15 @@ public class BinarySearchWordListFile {
 		fileWriter.close();
 		
 		while((readFileContent=bufferedReader.readLine())!=null) {
-			System.out.print(readFileContent+" ");
-			fileArrayContent[sizeOfArray++]=readFileContent;
+		
+			readFile=readFileContent+readFile;
 		}
 		bufferedReader.close();
+		fileArrayContent=readFile.split("\\s");
+		
 		Utility.insertionSort(fileArrayContent);
 		for(int i=0;i<fileArrayContent.length;i++)
+			if(fileArrayContent[i]!=null)
 			System.out.print(fileArrayContent[i]+" ");
 		/*System.out.println("Enter word to search");
 		position=Utility.binarySearch(fileArrayContent, scanner.next());

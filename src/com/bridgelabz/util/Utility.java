@@ -72,9 +72,12 @@ public class Utility {
  */
 
 	public static void binarySearch(int low,int high,int value) {
+	
 		int mid=(low+high)/2;
-		System.out.println("Is Value  between 0 to mid="+mid+" ?");
+		
 		Scanner scanner=new Scanner(System.in);
+		
+		System.out.println("Is Value  between 0 to mid="+mid+" ?");
 		try {
 			if(value==mid)
 				System.out.println(mid+" found");
