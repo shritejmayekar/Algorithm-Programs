@@ -1,14 +1,21 @@
 /******************************************************************************
- *  Compilation:  javac -d . Util.java
+ *  Compilation:  javac -d . com/bridgelabz/programs/Util.java
+ *  Execution:    java -cp bin com.bridgelabz.programs.Util
  *  
- *  Purpose: To perform different functionality
- *
+ *  Purpose: To perform different functionalities
+ *  	
+ *  		
+ *  			
+ *  			
  *  @author  Shritej
  *  @version 1.0
- *  @since   04-10-2017
+ *  @since   03-10-2017
  *
  ******************************************************************************/
-package com.bridgelabz.util.utility;
+package com.bridgelabz.util;
+
+import java.util.Random;
+
 
 public class Util {
 /**
@@ -54,7 +61,7 @@ public class Util {
 		return false;
 	}
 /**
- * 
+ * isAnagram method to find two number as anagram
  * @param number1
  * @param number2
  * @return boolean (true or false) 
@@ -77,7 +84,7 @@ public class Util {
 		return false;
 	}
 /**
- * 
+ * findNumber method to find same digit present in other number
  * @param digit
  * @param number2
  * @return
@@ -92,7 +99,7 @@ public class Util {
 		return false;
 	}
 /**
- * 
+ * position method will finds the position of digit number
  * @param number
  * @return
  */
@@ -109,7 +116,7 @@ public class Util {
 			return 0;
 	}
 /**
- * 
+ * prime method to check prime number
  * @param number
  * @return true or false (no. is prime or not)
  */
@@ -126,7 +133,7 @@ public class Util {
 		return false;
 	}
 /**
- * 
+ * primeNumber method is extension of isPrime which give range of prime number
  * @param low
  * @param high
  */
@@ -139,7 +146,36 @@ public class Util {
 		
 	}
 /**
- * 
+ * anagram and pallindrome method for finding number which is anagram and pallindrome 
+ * @param low
+ * @param high
+ */
+	public static void anagramAndPallindrome(int low,int high) {
+		int []primeNumberArray=new int[high];
+		int k=0;
+		
+		for(int i=low;i<high;i++) {
+			if(isPrime(i))
+			{
+				primeNumberArray[k++]=i;
+				
+			}
+		}
+		
+		System.out.println("=======Anagram And Pallindrome Number=====");
+		for(int i=0;i<k;i++) {
+			for(int j=1;j<k;j++) {
+				if(primeNumberArray[i]!=primeNumberArray[j])
+					if(isAnagram(primeNumberArray[i], primeNumberArray[j]))
+						if(reverseNumber(primeNumberArray[i])==primeNumberArray[j])
+							System.out.println(primeNumberArray[i]+" "+primeNumberArray[j]);
+			}
+		}
+			
+			
+	}
+/**
+ * isPalindrome for string ,find string pallindrome or not
  * @param string
  * @return
  */
@@ -149,7 +185,7 @@ public class Util {
 		for (int i = 0; i < ch.length/2; i++) {
 			if(ch[i]==ch[ch.length-1-i])  {
 				counter++;
-				break;
+				
 			}	
 		}
 		if(counter==ch.length/2)
@@ -157,7 +193,7 @@ public class Util {
 		return false;
 	}
 /**
- * 
+ * isPallindrome for integer, find number is pallindrome or not
  * @param number
  * @return
  */
@@ -174,6 +210,30 @@ public class Util {
 			return true;
 		return false;
 	}
+/**
+ * reversNumber method reverse the number
+ * @param number
+ * @return
+ */
+public static int reverseNumber(int number) {
+		
+		int reverseNumberReturn=0;
+		int temp=number;
+		while(temp!=0) {
+			reverseNumberReturn=temp%10+reverseNumberReturn*10;
+			temp=temp/10;
+			
+		}		
+		return reverseNumberReturn;
+		}
+
+
+/**
+ * dayOfWeek method to display moth and day
+ * @param month
+ * @param day
+ * @param year
+ */
 	public static void dayOfWeek(int month,int day,int year) {
 		int nyear=0,nday=0,nmonth=0;
 		String strMonth[]={"","January","February","March","April"
@@ -187,18 +247,40 @@ public class Util {
 		System.out.println(strMonth[month]+" "+day+" "+strDay[nday]);
 	
 	}
+/**
+ * 
+ * @param temperature
+ * @return
+ */
 	public static double temperatureConversionF(double temperature) {
 		return (temperature*9)/5+32;
 	}
+/**
+ * 
+ * @param temperature
+ * @return
+ */
 	public static double temperatureConversionC(double temperature) {
 		return (temperature-32)*5/9;
 	}
+/**
+ * 
+ * @param principal
+ * @param year
+ * @param rate
+ * @return
+ */
 	public static double monthlyPayment(double principal,double year,double rate) {
 		double month=12*year;
 		double rateOf=rate/(100*12);
 		double payment=(principal*rateOf)/(1-Math.pow(1+rateOf,-month));
 		return payment;
 	}
+/**
+ * sqrt method gives the square root of number
+ * @param number
+ * @return
+ */
 	public static double sqrt(double number) {
 		double t=number;
 		double epsilon=1e-15;
@@ -210,6 +292,12 @@ public class Util {
 		return t;
 	
 	}
+/**
+ * toBinary method converts decimal to binary
+ * @param number
+ * @return 
+ * 
+ */
 	public static String toBinary(int number) {
 		String binary="";
 		int num=0;
@@ -226,9 +314,17 @@ public class Util {
 				number=number/2;
 		
 		}
-			System.out.println("nume"+num);
+			
 		return binary;
 	
+	}
+/**
+ * randomGenerator generates random number
+ * @return
+ */
+	public static int randomGenerator() {
+		Random random=new Random();
+		return random.nextInt(100);
 	}
 	public static void main(String args[]) {
 	dayOfWeek(10,5,2017);
