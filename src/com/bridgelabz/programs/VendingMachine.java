@@ -39,93 +39,33 @@ import java.util.logging.Handler;
 public class VendingMachine {
 	
 	public static int changeOfAmount;
-	public static int[] notes={1000,500,100,50,10,5,2,1};
+	public static int[] notes={1000,500,100,50,20,10,5,2,1};
+	public static int[] changeNotes=new int[10];
+	public static void calMoney(int changeOfAmount) {
+		int j=0;
+		while(changeOfAmount>10) {
+		for(int k=0;k<notes.length;k++)
+			if(changeOfAmount%notes[k]==0) {
+				changeOfAmount=changeOfAmount-notes[k];
+				changeNotes[j++]=notes[k];
+				System.out.print(notes[k]+" ");
+				break;
+			}
+		
+		
+		}
+		
+		
+		
+	}
+	
 	public static void main(String[] args) {
 	Scanner scanner=new Scanner(System.in);
 	System.out.println("Please enter the changeOfamount:");
 	changeOfAmount=scanner.nextInt();
+	
+	calMoney(changeOfAmount);
 
-	while(changeOfAmount>0) {
-		if(changeOfAmount%1000==0) {
-			changeOfAmount=changeOfAmount-1000;
-			System.out.println("1000");
-			}
-			else if(changeOfAmount%500==0) {
-			changeOfAmount=changeOfAmount-500;
-			System.out.println("500");
-			}
-			else if(changeOfAmount%100==0) {
-			changeOfAmount=changeOfAmount-100;
-			System.out.println("100");
-			}
-			else if(changeOfAmount%50==0) {
-			changeOfAmount=changeOfAmount-50;
-			System.out.println("50");
-			}
-
-			else if(changeOfAmount%10==0) {
-			changeOfAmount=changeOfAmount-10;
-			System.out.println("10");
-			}
-			else 
-			{
-				
-				if(changeOfAmount%5==0) {
-					changeOfAmount=changeOfAmount-5;
-					System.out.println("5");
-					}
-					else if(changeOfAmount%2==0) {
-						changeOfAmount=changeOfAmount-2;
-						System.out.println("2");
-						
-						
-						}
-					
-					else if(changeOfAmount%1==0) {
-					changeOfAmount=changeOfAmount-1;
-					System.out.println("1");
-					}
-				
-				
-			}
-		
-		
-			
-		
-	}
 	}
 
 }
-/*if(changeOfAmount%1000==0) {
-changeOfAmount=changeOfAmount-1000;
-System.out.println("1000");
-}
-else if(changeOfAmount%500==0) {
-changeOfAmount=changeOfAmount-500;
-System.out.println("500");
-}
-else if(changeOfAmount%100==0) {
-changeOfAmount=changeOfAmount-100;
-System.out.println("100");
-}
-else if(changeOfAmount%50==0) {
-changeOfAmount=changeOfAmount-50;
-System.out.println("50");
-}
-
-else if(changeOfAmount%10==0) {
-changeOfAmount=changeOfAmount-10;
-System.out.println("10");
-}
-else if(changeOfAmount%5==0) {
-changeOfAmount=changeOfAmount-5;
-System.out.println("5");
-}
-else if(changeOfAmount%2==0) {
-changeOfAmount=changeOfAmount-2;
-System.out.println("2");
-}
-else if(changeOfAmount%1==0) {
-changeOfAmount=changeOfAmount-1;
-System.out.println("1");
-}*/

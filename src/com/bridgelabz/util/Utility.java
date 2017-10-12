@@ -117,6 +117,55 @@ public class Utility {
 		
 	
 	}
+/**
+ * mergeSort method to sort the elements generic type
+ * @param array
+ */
+	public static void mergeSort(String[] array) {
+		if(array==null) {
+			return;
+		}
+		if(array.length>1) {
+			/* divide array i n half */
+			int mid=array.length/2;
+			/* left array */
+			String[] leftArray=new String[mid];
+			/* right array */
+			String[] rightArray=new String[array.length-mid];
+			
+			/*copy array elements halfly in left array*/
+			for (int i = 0; i <mid; i++) 
+				leftArray[i]=array[i];
+			/*copy array elements next halfly in right array*/
+			for (int i =mid; i <array.length; i++)
+				rightArray[i-mid]=array[i];
+			//call merge sort method till completely divides the array*/	
+			mergeSort(leftArray);
+			mergeSort(rightArray);
+			
+			int i=0;
+			int j=0;
+			int k=0;
+			/*merge left and right array*/
+			while(i<leftArray.length && j<rightArray.length) {
+				if((leftArray[i].compareTo(rightArray[j])<0) )
+					array[k++]=leftArray[i++];
+			
+				else
+					array[k++]=rightArray[j++];
+				
+			}
+			/* merge remaining parts */
+			while(i<leftArray.length)
+				array[k++]=leftArray[i++];
+			while(j<rightArray.length)
+				array[k++]=rightArray[j++];
+			
+		}
+		
+	
+	}
+
 	
 	public static void main(String[] args) {
 	

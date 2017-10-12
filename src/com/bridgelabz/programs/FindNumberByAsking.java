@@ -28,7 +28,7 @@ public class FindNumberByAsking{
 		
 		
 			number=Integer.parseInt(args[0]);
-			System.out.println("Guess number between o to "+(Math.pow(2, number)-1));
+			System.out.println("Guess number between o to "+(Math.pow(2, number)));
 			int value=scanner.nextInt();
 			Utility.binarySearch(0,(int)Math.pow(2,number),value);
 			scanner.close();

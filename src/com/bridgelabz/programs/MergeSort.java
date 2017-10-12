@@ -1,58 +1,38 @@
+/******************************************************************************
+ *  Compilation:  javac -d . com/bridgelabz/programs/MergeSort.java
+ *  Execution:    java -cp bin com.bridgelabz.programs.MergeSort
+ *  
+ *  Purpose: To sort the string array
+ 
+ *  			
+ *  			
+ *  @author  Shritej
+ *  @version 1.0
+ *  @since   03-10-2017
+ *
+ ******************************************************************************/
 package com.bridgelabz.programs;
 
+import java.util.Scanner;
+
+import com.bridgelabz.util.Utility;
+
 public class MergeSort {
-	public static int[] array={6,5,4,1};
-	public static int[] copy1=new int[4];
-	public static int[] copy2=new int[4];
-	public static void mergeSort(int[] array,int leftBound,int rightBound) {
-		int mid=(leftBound+rightBound)/2;
-		if(leftBound<rightBound) {
-			
-			mergeSort(array, leftBound, mid);
-			mergeSort(array, mid+1, rightBound);
-			merge(array,leftBound,mid,rightBound);
-		}
-		
-	}
-	public static void merge(int[] array,int leftBound,int mid,int rightBound) {
-		/*//int innerMidFirst=(leftBound+mid)/2;
-		//int innerMidSecond=(mid+1+rightBound)/2;
-		for (int i = 0; i < innerMidFirst; i++) {
-			copy1[i]=array[i];
-		}
-		for (int i = 0; i < innerMidFirst; i++) {
-			copy1[i]=array[i];
-		}*/
-		/*int p=leftBound,q=mid+1;
-		int k=0;
-		 
-			
-		for (int i = leftBound; i <rightBound; i++) {
-			if(p>mid) {
-				copy1[k++]=array[q++];
-			}
-			else if(q>mid) {
-				copy1[k++]=array[p++];
-			}
-			else if(array[p]<array[q])
-				copy1[k++]=array[p++];
-			else
-				copy1[k++]=array[q++];
-		}
-		for(int i=0;i<k;k++) {
-			array[leftBound++]=copy1[i];
-		}
-		*/
-		
-	}
+	public static String sentence;
 	
 	public static void main(String[] args) {
-		mergeSort(array,0,4);
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("please enter the sentence:");
+		sentence=scanner.nextLine();
+		String stringArray[]=sentence.split("\\s");
 		
-	for (int i = 0; i < array.length; i++) {
-		System.out.print(array[i]);
-	}
+		Utility.mergeSort(stringArray);
+		System.out.println("Sorted string:");
+		for (int i = 0; i < stringArray.length; i++) {
+			System.out.print(stringArray[i]+" ");
+		}
 	
+		scanner.close();
 		
 	}
 
