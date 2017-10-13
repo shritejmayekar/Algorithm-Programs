@@ -18,6 +18,10 @@ import java.util.Random;
 
 
 public class Util {
+	/*Declaration */
+
+	public static int[] notes={1000,500,100,50,20,10,5,2,1};
+	public static int[] changeNotes=new int[9];
 /**
  * 
  * @param string1
@@ -348,6 +352,54 @@ public static int reverseNumber(int number) {
 		}
 		printBinaryTodecimal(swapNimbelArray);
 		
+	}
+	
+/**
+ * calMoney method just calcalutes money as minimum notes in change
+ * @param changeOfAmount
+ */
+	public static void calMoney(int changeOfAmount) {
+		int j=0;
+		while(changeOfAmount>10) {
+		for(int k=0;k<notes.length;k++)
+			if(changeOfAmount%notes[k]==0) {
+				changeOfAmount=changeOfAmount-notes[k];
+				changeNotes[j++]=notes[k];
+				System.out.print(notes[k]+" ");
+				break;
+			}
+		
+		
+		}
+		
+		
+		
+	}
+/**
+ * returnNotes method will return the notes needed according to denomination
+ */
+	public static void returnNotes() {
+		System.out.println("Notes reurned by vending machine");
+		for(int i=0;i<changeNotes.length;i++) {
+			System.out.println("Note of "+notes[i]+" X "+changeNotes[i]);
+		}
+	}
+/**
+ * amountChange method will calculates the amount change as vending machine
+ * @param amount
+ */
+	public static void amountChange(int amount) {
+	while(amount>0) {
+		for(int i=0;i<9;i++) {
+			if(amount>=notes[i]) {
+				amount=amount-notes[i];
+				//System.out.print(notes[i]+" ");
+				changeNotes[i]=changeNotes[i]+1;
+				break;
+			}
+		}
+	}
+	returnNotes();
 	}
 	
 	

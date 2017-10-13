@@ -53,17 +53,17 @@ public class BinarySearchWordListFile {
 		bufferedReader.close();
 		fileArrayContent=readFile.split("\\s");
 		
-		Utility.insertionSort(fileArrayContent);
+		Utility.bubbleSort(fileArrayContent);
 		for(int i=0;i<fileArrayContent.length;i++)
 			if(fileArrayContent[i]!=null)
 			System.out.print(fileArrayContent[i]+" ");
-		/*System.out.println("Enter word to search");
+		System.out.println("Enter word to search");
 		position=Utility.binarySearch(fileArrayContent, scanner.next());
 		if(position==-1) 
 			System.out.println("word not found");
 		else
 			System.out.println("Word found at position "+position);
-*/
+
 	}
 
 }

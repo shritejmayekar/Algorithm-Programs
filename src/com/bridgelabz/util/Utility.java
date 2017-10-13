@@ -71,20 +71,20 @@ public class Utility {
  * @param value
  */
 
-	public static void binarySearch(int low,int high,int value) {
+	public static void binarySearch(int low,int high) {
 	
 		int mid=(low+high)/2;
 		
 		Scanner scanner=new Scanner(System.in);
 		
-		System.out.println("Is Value  between 0 to mid="+mid+" ?");
+		System.out.println("Is Value  between "+low+" to mid="+mid+" ?");
 		try {
-			if(value==mid)
+			if(low==high)
 				System.out.println(mid+" found");
 			else if(scanner.nextBoolean()) 
-				binarySearch(low, mid-1, value);
+				binarySearch(low, mid);
 			else
-				binarySearch(mid+1, high, value);
+				binarySearch(mid+1, high);
 		}
 		catch(NumberFormatException exceptionNumberformat) {
 			System.out.println("Exception:"+exceptionNumberformat);

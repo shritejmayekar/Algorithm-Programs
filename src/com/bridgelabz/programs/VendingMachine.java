@@ -21,6 +21,8 @@ package com.bridgelabz.programs;
 
 import java.util.Scanner;
 import java.util.logging.Handler;
+
+import com.bridgelabz.util.Util;
 /**
  * 
  * @author shritej
@@ -37,34 +39,13 @@ import java.util.logging.Handler;
  *
  */
 public class VendingMachine {
-	
 	public static int changeOfAmount;
-	public static int[] notes={1000,500,100,50,20,10,5,2,1};
-	public static int[] changeNotes=new int[10];
-	public static void calMoney(int changeOfAmount) {
-		int j=0;
-		while(changeOfAmount>10) {
-		for(int k=0;k<notes.length;k++)
-			if(changeOfAmount%notes[k]==0) {
-				changeOfAmount=changeOfAmount-notes[k];
-				changeNotes[j++]=notes[k];
-				System.out.print(notes[k]+" ");
-				break;
-			}
-		
-		
-		}
-		
-		
-		
-	}
 	
 	public static void main(String[] args) {
 	Scanner scanner=new Scanner(System.in);
 	System.out.println("Please enter the changeOfamount:");
 	changeOfAmount=scanner.nextInt();
-	
-	calMoney(changeOfAmount);
+	Util.amountChange(changeOfAmount);
 
 	}
 
