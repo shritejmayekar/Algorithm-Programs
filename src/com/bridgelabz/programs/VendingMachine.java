@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/VendingMachinejava
- *  Execution:    java -cp bin com.bridgelabz.programs.VendingMachine
  *  
  *  Purpose: To Find minimum no. of notes to be return to person as change
  *  		 here is 1, 2, 5, 10, 50, 100, 500 and 1000 Rs Notes 

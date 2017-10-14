@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/SquareRoot.java
- *  Execution:    java -cp bin com.bridgelabz.programsSquareRoot
  *  
  *  Purpose: To Find Square root of number using newtons method
  *  	

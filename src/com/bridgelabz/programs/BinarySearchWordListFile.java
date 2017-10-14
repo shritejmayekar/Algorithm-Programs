@@ -1,6 +1,5 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/BinarySearchWordListFile.java
- *  Execution:    java -cp bin com.bridgelabz.programs.BinarySearchWordListFile
+ * 
  *  
  *  Purpose: To do search from file sort it and then binary search
  *  	

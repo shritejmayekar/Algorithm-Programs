@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/FindNumberByAsking.java
- *  Execution:    java -cp bin com.bridgelabz.programs.FindNumberByAsking
  *  
  *  Purpose: To FindNuber using binary search method by asking questions
  *  	

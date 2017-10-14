@@ -1,7 +1,6 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/DayOfWeek.java
- *  Execution:    java -cp bin com.bridgelabz.programs.DayOfWeek month day year
- *  
+ * 
+ * 
  *  Purpose: To find month and day using date given by user
  *  	
  *  		

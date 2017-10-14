@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/Anagram.java
- *  Execution:    java -cp bin com.bridgelabz.programs.Anagram
  *  
  *  Purpose: To take two Strings, the second string is just arrangement of
  *  			first and vice versa than it is anagram else not.

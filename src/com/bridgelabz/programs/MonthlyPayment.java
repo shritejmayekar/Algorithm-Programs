@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/MonthlyPayment.java
- *  Execution:    java -cp bin com.bridgelabz.programs.MonthlyPayment
  *  
  *  Purpose: To Find monthly payment need to do by person
  *  	

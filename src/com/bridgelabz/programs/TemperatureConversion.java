@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/TemperatureConversion.java
- *  Execution:    java -cp bin com.bridgelabz.programs.temperatureConversion
  *  
  *  Purpose: To Convert the temperature form fahrenheit to celcius and vice versa
  *  	

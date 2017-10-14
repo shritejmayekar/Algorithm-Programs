@@ -1,3 +1,16 @@
+/******************************************************************************
+ * 
+ * 
+ *  Purpose: To convert decimal to binary
+ *  	
+ *  		
+ *  			
+ *  			
+ *  @author  Shritej
+ *  @version 1.0
+ *  @since   03-10-2017
+ *
+ ******************************************************************************/
 package com.bridgelabz.programs;
 
 import java.util.Scanner;

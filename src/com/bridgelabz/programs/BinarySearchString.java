@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/BinarySearchString.java
- *  Execution:    java -cp bin com.bridgelabz.programs.BinarySearchString
  *  
  *  Purpose: To search string in sentence
  *  	

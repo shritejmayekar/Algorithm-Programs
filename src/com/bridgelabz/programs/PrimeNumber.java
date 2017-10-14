@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/PrimeNumber.java
- *  Execution:    java -cp bin com.bridgelabz.programs.PrimeNumber
  *  
  *  Purpose: To find prime numbers in specified range
  *  	

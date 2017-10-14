@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/BinnarySwapNimble.java
- *  Execution:    java -cp bin com.bridgelabz.programs.BinarySwapNimble
  *  
  *  Purpose: To take decimal no. and convert it into binary and than swap nimble
  *  			and do produce new decimal no.

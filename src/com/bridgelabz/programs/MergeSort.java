@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/MergeSort.java
- *  Execution:    java -cp bin com.bridgelabz.programs.MergeSort
  *  
  *  Purpose: To sort the string array
  

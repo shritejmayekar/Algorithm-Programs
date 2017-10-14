@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/BubbleSort.java
- *  Execution:    java -cp bin com.bridgelabz.programs.BubbleSort
  *  
  *  Purpose: To sort integer using bubble sort
  *  	

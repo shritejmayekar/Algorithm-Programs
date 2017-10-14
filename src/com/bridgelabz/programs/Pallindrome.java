@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/Pallindrome.java
- *  Execution:    java -cp bin com.bridgelabz.programs.Pallindrome
  *  
  *  Purpose: To find string/integer are pallindrome or not
  *  	

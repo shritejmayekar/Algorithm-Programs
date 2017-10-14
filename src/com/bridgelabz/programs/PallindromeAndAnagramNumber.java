@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/PallindromeAndAnagramNumber.java
- *  Execution:    java -cp bin com.bridgelabz.programs.PallindromeAndAnagramNumber
  *  
  *  Purpose: To get the range of number which are anagram as well as makes pallindrome
  *  	

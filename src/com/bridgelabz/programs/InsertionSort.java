@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/InsertionSort.java
- *  Execution:    java -cp bin com.bridgelabz.programs.InsertionSort
  *  
  *  Purpose: To take sentence and sort String by using insertionSort and show output
  *  	

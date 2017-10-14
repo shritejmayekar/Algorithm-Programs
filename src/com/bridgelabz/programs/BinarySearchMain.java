@@ -1,6 +1,4 @@
 /******************************************************************************
- *  Compilation:  javac -d . com/bridgelabz/programs/BinarySearchMain.java
- *  Execution:    java -cp bin com.bridgelabz.programs.BinarySearchMain
  *  
  *  Purpose: To do sort,binary search for string and integer
  *  	
