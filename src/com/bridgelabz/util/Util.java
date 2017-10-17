@@ -184,15 +184,15 @@ public class Util {
  * @return
  */
 	public static boolean isPallindrome(String string) {
-		char ch[]=string.toCharArray();
+		char characterArray[]=string.toCharArray();
 		int counter=0;
-		for (int i = 0; i < ch.length/2; i++) {
-			if(ch[i]==ch[ch.length-1-i])  {
+		for (int i = 0; i < characterArray.length/2; i++) {
+			if(characterArray[i]==characterArray[characterArray.length-1-i])  {
 				counter++;
 				
 			}	
 		}
-		if(counter==ch.length/2)
+		if(counter==characterArray.length/2)
 			return true;
 		return false;
 	}
