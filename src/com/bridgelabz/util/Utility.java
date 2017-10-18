@@ -169,37 +169,35 @@ public class Utility {
 	
 	public static void main(String[] args) {
 	
-	int arr[]={1,15,0,55,6,5};
-	int br[]={5,6,8,11,2};
-	String g[]={"welcome","bcd","world"};
+	int arrayOne[]={1,15,0,55,6,5};
+	int secondArray[]={5,6,8,11,2};
+	String stringArray[]={"welcome","bcd","world"};
 
-	String s1[]={"hello","how are you"};
-	char s[]={'b','a','c'};
-	char f[]={'f','g','a'};
-	//char s[]=s1[1].toCharArray();
+	String stringArrayTwo[]={"hello","how are you"};
+	char characterOne[]={'b','a','c'};
+	char characterTwo[]={'f','g','a'};
 
-	for(int i=0;i<arr.length;i++)
-	System.out.print(arr[i]+" ");
+	for(int i=0;i<arrayOne.length;i++)
+	System.out.print(arrayOne[i]+" ");
 	System.out.println();
-	bubbleSort(s1);
-	for(int i=0;i<s1.length;i++)
-	System.out.print(s1[i]+" ");
-	System.out.println();
-	
-	//System.out.println("positon="+binarySearch(s,'g'));
-	//insertionSort(br);
-	for(int i=0;i<br.length;i++)
-		System.out.print(br[i]+" ");
-	//insertionSort(f);
-	for(int i=0;i<f.length;i++)
-		System.out.print(f[i]+" ");
-
-	insertionSort(g);
-	for(int i=0;i<g.length;i++)
-		System.out.print(g[i]+" ");
+	bubbleSort(stringArrayTwo);
+	for(int i=0;i<stringArrayTwo.length;i++)
+	System.out.print(stringArrayTwo[i]+" ");
 	System.out.println();
 	
-	System.out.println("positon="+binarySearch(g, "world"));
+	
+	for(int i=0;i<secondArray.length;i++)
+		System.out.print(secondArray[i]+" ");
+	
+	for(int i=0;i<characterTwo.length;i++)
+		System.out.print(characterTwo[i]+" ");
+
+	insertionSort(stringArray);
+	for(int i=0;i<stringArray.length;i++)
+		System.out.print(stringArray[i]+" ");
+	System.out.println();
+	
+	System.out.println("positon="+binarySearch(stringArray, "world"));
 	
 	
 	}

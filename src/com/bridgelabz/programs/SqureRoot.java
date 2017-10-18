@@ -20,10 +20,15 @@ public class SqureRoot {
 	public static double squareRoot;
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
-		System.out.println("please enter the number to find squareroot:");
-		squareRoot=Util.sqrt(scanner.nextDouble());
-		
-		System.out.println("The squareroot is "+squareRoot);
+		try {
+			System.out.println("please enter the number to find squareroot:");
+			squareRoot=Util.sqrt(scanner.nextDouble());
+			
+			System.out.println("The squareroot is "+squareRoot);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		scanner.close();
 	}
 

@@ -23,10 +23,15 @@ public class Anagram {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Please enter first name and second name");
 		
-		if(Util.isAnagram(scanner.nextLine(), scanner.nextLine()))
-			System.out.println(ANAGRAM_MESSAGE);
-		else
-			System.out.println(NOT_ANAGRAM_MESSAGE);
+		try {
+			if(Util.isAnagram(scanner.nextLine(), scanner.nextLine()))
+				System.out.println(ANAGRAM_MESSAGE);
+			else
+				System.out.println(NOT_ANAGRAM_MESSAGE);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		scanner.close();
 	}
 

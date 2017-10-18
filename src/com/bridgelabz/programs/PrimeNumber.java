@@ -20,8 +20,13 @@ public class PrimeNumber {
 
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
-		System.out.println("Please specify range:");
-		Util.primeNumber(0, scanner.nextInt());
+		try {
+			System.out.println("Please specify range:");
+			Util.primeNumber(0, scanner.nextInt());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		scanner.close();
 	}
 

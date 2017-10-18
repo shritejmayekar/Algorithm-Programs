@@ -20,14 +20,19 @@ public class MergeSort {
 	
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
-		System.out.println("please enter the sentence:");
-		sentence=scanner.nextLine();
-		String stringArray[]=sentence.split("\\s");
-		
-		Utility.mergeSort(stringArray);
-		System.out.println("Sorted string:");
-		for (int i = 0; i < stringArray.length; i++) {
-			System.out.print(stringArray[i]+" ");
+		try {
+			System.out.println("please enter the sentence:");
+			sentence=scanner.nextLine();
+			String stringArray[]=sentence.split("\\s");
+			
+			Utility.mergeSort(stringArray);
+			System.out.println("Sorted string:");
+			for (int i = 0; i < stringArray.length; i++) {
+				System.out.print(stringArray[i]+" ");
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	
 		scanner.close();

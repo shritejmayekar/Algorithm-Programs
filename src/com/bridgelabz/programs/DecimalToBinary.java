@@ -22,9 +22,14 @@ public class DecimalToBinary {
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
 
-		System.out.println("please enter the decimal number:");
-		binary=Util.toBinary(scanner.nextInt());
-		System.out.println("The binary number is "+binary);
+		try {
+			System.out.println("please enter the decimal number:");
+			binary=Util.toBinary(scanner.nextInt());
+			System.out.println("The binary number is "+binary);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		scanner.close();
 	}
 

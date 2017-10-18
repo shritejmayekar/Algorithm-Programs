@@ -20,8 +20,13 @@ public class PallindromeAndAnagramNumber {
 
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
-		System.out.println("Please enter range  to get prime pallindrome and anagram numbers:");
-		Util.anagramAndPallindrome(scanner.nextInt(), scanner.nextInt());
+		try {
+			System.out.println("Please enter range  to get prime pallindrome and anagram numbers:");
+			Util.anagramAndPallindrome(scanner.nextInt(), scanner.nextInt());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		scanner.close();
 	}
 

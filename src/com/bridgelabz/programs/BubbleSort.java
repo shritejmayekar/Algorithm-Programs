@@ -20,16 +20,21 @@ public class BubbleSort {
 
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
-		System.out.println("Enter the length of array:");
-		Integer[] unSortedarray=new Integer[scanner.nextInt()];
-		System.out.println("Enter elements:");
-		for (int i = 0; i < unSortedarray.length; i++) {
-			unSortedarray[i]=scanner.nextInt();
-		}
-		Utility.bubbleSort(unSortedarray);
-		System.out.println("Sorted by Bubble sort");
-		for (int i = 0; i < unSortedarray.length; i++) {
-			System.out.print(unSortedarray[i]+" ");
+		try {
+			System.out.println("Enter the length of array:");
+			Integer[] unSortedarray=new Integer[scanner.nextInt()];
+			System.out.println("Enter elements:");
+			for (int i = 0; i < unSortedarray.length; i++) {
+				unSortedarray[i]=scanner.nextInt();
+			}
+			Utility.bubbleSort(unSortedarray);
+			System.out.println("Sorted by Bubble sort");
+			for (int i = 0; i < unSortedarray.length; i++) {
+				System.out.print(unSortedarray[i]+" ");
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		scanner.close();
 

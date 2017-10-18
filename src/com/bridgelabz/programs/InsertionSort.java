@@ -20,15 +20,20 @@ public class InsertionSort {
 	public static String listOfWords;
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
-		System.out.println("Enter the words");
-		listOfWords=scanner.nextLine();
-		
-		String unSortedarray[]=listOfWords.split("\\s");
-		Utility.insertionSort(unSortedarray);
-		
-		System.out.println("Sorted by Insertion sort");
-		for (int i = 0; i < unSortedarray.length; i++) {
-			System.out.print(unSortedarray[i]+" ");
+		try {
+			System.out.println("Enter the words");
+			listOfWords=scanner.nextLine();
+			
+			String unSortedarray[]=listOfWords.split("\\s");
+			Utility.insertionSort(unSortedarray);
+			
+			System.out.println("Sorted by Insertion sort");
+			for (int i = 0; i < unSortedarray.length; i++) {
+				System.out.print(unSortedarray[i]+" ");
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 		

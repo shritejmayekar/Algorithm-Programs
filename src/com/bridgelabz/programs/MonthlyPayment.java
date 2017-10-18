@@ -21,9 +21,14 @@ public class MonthlyPayment {
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
 
-		System.out.println("please enter the Principal ,rate of interate and no. of years:");
-		mothlyPayment=Util.monthlyPayment(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());
-		System.out.println("The monthly payment="+mothlyPayment);
+		try {
+			System.out.println("please enter the Principal ,rate of interate and no. of years:");
+			mothlyPayment=Util.monthlyPayment(scanner.nextDouble(), scanner.nextDouble(), scanner.nextDouble());
+			System.out.println("The monthly payment="+mothlyPayment);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		scanner.close();
 	}
 

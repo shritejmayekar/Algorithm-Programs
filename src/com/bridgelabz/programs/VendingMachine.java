@@ -41,9 +41,14 @@ public class VendingMachine {
 	
 	public static void main(String[] args) {
 	Scanner scanner=new Scanner(System.in);
-	System.out.println("Please enter the changeOfamount:");
-	changeOfAmount=scanner.nextInt();
-	Util.amountChange(changeOfAmount);
+	try {
+		System.out.println("Please enter the changeOfamount:");
+		changeOfAmount=scanner.nextInt();
+		Util.amountChange(changeOfAmount);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 
 	}
 
