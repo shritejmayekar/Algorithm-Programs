@@ -44,7 +44,8 @@ public class Utility {
  */
 	public static <T extends Comparable<T>> int binarySearch(T[] array,T value) {
 	
-		int low=0,mid;
+		int low=0;
+		int mid=0;
 		int high=array.length;
 		while(low<=high) {	
 			mid=(low+high)/2;
