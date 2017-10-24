@@ -19,6 +19,7 @@ import com.bridgelabz.util.Utility;
 
 public class BinarySearchMain {
 	/*Declaration */
+	public static boolean flag=true;
 	public static int position,positionString;
 	public static Integer[] unSortedIntegerArray=new Integer[5];
 	public static String[] unSortedStringArray=new String[5];
@@ -59,7 +60,7 @@ public class BinarySearchMain {
 	}
 	public static void main(String[] args) {
 		try {
-			while(true) {
+			while(flag) {
 				System.out.println("\nplease enter choice \n1.readIntegerArray"
 						+ "\n2.readStringArray"
 						+ "\n3.bubbleSort Integer"
@@ -126,7 +127,7 @@ public class BinarySearchMain {
 							StopWatch.stop();
 							StopWatch.showElapse();
 							break;
-					case 9:System.exit(0);
+					case 9:flag=false;
 					break;
 			
 					default:System.out.println("invalid");
