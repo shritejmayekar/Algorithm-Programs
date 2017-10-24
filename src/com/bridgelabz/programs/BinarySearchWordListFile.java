@@ -27,7 +27,7 @@ public class BinarySearchWordListFile {
 	public static Scanner scanner=new Scanner(System.in);
 	public static String[] fileArrayContent=new String[5];
 	public static int sizeOfArray,position;
-	public static String readFileContent,readFile;
+	public static String readFileContent,readFile="";
 	public static void main(String[] args) throws IOException {
 		File file=new File("demo.txt");
 		FileWriter fileWriter=new FileWriter(file);
