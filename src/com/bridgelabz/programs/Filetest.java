@@ -21,7 +21,7 @@ public class Filetest {
       FileReader fr = new FileReader(file); 
       char [] a = new char[50];
       fr.read(a);   // reads the content to the array
-     String string=new String("a");
+     String string="a";
       for(char c : a)
       {
          System.out.print(c);
