@@ -22,29 +22,29 @@ public class Util {
 
 	public static int[] notes={1000,500,100,50,20,10,5,2,1};
 	public static int[] changeNotes=new int[9];
-/**
- * 
- * @param string1
- * @param string2
- * @return boolean (isAnagram or not)
- */
-	public static boolean isAnagram(String string1,String string2) {
+	/**
+	 * isAnagram checks oneWord is arrangement of wordTwo
+	 * @param wordOne
+	 * @param wordTwo
+	 * @return
+	 */
+	public static boolean isAnagram(String wordOne,String wordTwo) {
 		int counter=0; 
 		/* 
 		 * Remove space
 		 */
-		string1=string1.replaceAll("\\s","");
-		string2=string2.replaceAll("\\s","");
+		wordOne=wordOne.replaceAll("\\s","");
+		wordTwo= wordTwo.replaceAll("\\s","");
 		/*
 		 * convert to lower case
 		 */
-		string1=string1.toLowerCase();
-		string2=string2.toLowerCase();
+		wordOne=wordOne.toLowerCase();
+		wordTwo= wordTwo.toLowerCase();
 		/*
 		 * String to char array conversion
 		 */
-		char chararray1[]=string1.toCharArray();
-		char chararray2[]=string2.toCharArray();
+		char chararray1[]=wordOne.toCharArray();
+		char chararray2[]=wordTwo.toCharArray();
 		
 		if(chararray1.length!=chararray2.length){
 			return false;
@@ -66,20 +66,20 @@ public class Util {
 	}
 /**
  * isAnagram method to find two number as anagram
- * @param number1
- * @param number2
+ * @param numberOne
+ * @param numberTwo
  * @return boolean (true or false) 
  */
-	public static boolean isAnagram(int number1,int number2) {
+	public static boolean isAnagram(int numberOne,int numberTwo) {
 		int counter=0;
-		int temp=number1;
-		if(position(number1)==position(number2)) {
-			int digit=number1;
-			while(number1!=0) {
-				digit=number1%10;
-				if(findNumber(digit, number2))
+		int temp=numberOne;
+		if(position(numberOne)==position(numberTwo)) {
+			int digit=numberOne;
+			while(numberOne!=0) {
+				digit=numberOne%10;
+				if(findNumber(digit, numberTwo))
 					counter++;
-				number1=number1/10;
+				numberOne=numberOne/10;
 			}
 			if(counter==position(temp))
 				return true;
@@ -90,11 +90,11 @@ public class Util {
 /**
  * findNumber method to find same digit present in other number
  * @param digit
- * @param number2
+ * @param numberTwo
  * @return
  */
-	public static boolean findNumber(int digit,int number2) {
-		int temp=number2;
+	public static boolean findNumber(int digit,int numberTwo) {
+		int temp=numberTwo;
 		while(temp!=0) {
 			if(digit==temp%10)
 				return true;
@@ -239,7 +239,9 @@ public static int reverseNumber(int number) {
  * @param year
  */
 	public static void dayOfWeek(int month,int day,int year) {
-		int nyear=0,nday=0,nmonth=0;
+		int nyear=0;
+		int nday=0;
+		int nmonth=0;
 		String strMonth[]={"","January","February","March","April"
 		,"May","June","July","August","September","October","November","December"};
 		String strDay[]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
@@ -323,7 +325,8 @@ public static int reverseNumber(int number) {
 	
 	}
 	public static void printBinaryTodecimal(int[] binaryArrray) {
-		int sum=0,bit=7;
+		int sum=0;
+		int bit=7;
 		for(int i=0;i<binaryArrray.length;i++) {
 			if(binaryArrray[i]==1) {
 				sum=(int) (sum+Math.pow(2, bit));
@@ -368,12 +371,7 @@ public static int reverseNumber(int number) {
 				System.out.print(notes[k]+" ");
 				break;
 			}
-		
-		
 		}
-		
-		
-		
 	}
 /**
  * returnNotes method will return the notes needed according to denomination

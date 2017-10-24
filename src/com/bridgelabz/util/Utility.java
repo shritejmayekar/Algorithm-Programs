@@ -1,3 +1,8 @@
+
+package com.bridgelabz.util;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
 /******************************************************************************
  *  Compilation:  javac -d . com/bridgelabz/programs/Utility.java
  *  Execution:    java -cp bin com.bridgelabz.programs.Utility
@@ -12,13 +17,6 @@
  *  @since   03-10-2017
  *
  ******************************************************************************/
-package com.bridgelabz.util;
-
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
-import com.bridgelabz.programs.BinarySearchMain;
-
 public class Utility {
 /**
  * bubbleSort method to sort the element of generic type
