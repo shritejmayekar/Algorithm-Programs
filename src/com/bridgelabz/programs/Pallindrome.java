@@ -27,9 +27,8 @@ public class Pallindrome {
 			break;
 			case 2:System.out.println("Pallindrome:"+Util.isPallindrome(scanner.nextInt()));
 			break;
-			default:
-				System.out.println("Invalid");
-				break;
+			default:System.out.println("Invalid");
+			break;
 			}
 		}
 		catch(Exception exception) {
