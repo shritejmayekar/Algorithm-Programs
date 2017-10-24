@@ -33,18 +33,18 @@ public class Util {
 		/* 
 		 * Remove space
 		 */
-		wordOne=wordOne.replaceAll("\\s","");
-		wordTwo= wordTwo.replaceAll("\\s","");
+		String tempWordOne=wordOne.replaceAll("\\s","");
+		String tempWordTwo= wordTwo.replaceAll("\\s","");
 		/*
 		 * convert to lower case
 		 */
-		wordOne=wordOne.toLowerCase();
-		wordTwo= wordTwo.toLowerCase();
+		tempWordOne=tempWordOne.toLowerCase();
+		tempWordTwo=tempWordTwo.toLowerCase();
 		/*
 		 * String to char array conversion
 		 */
-		char chararray1[]=wordOne.toCharArray();
-		char chararray2[]=wordTwo.toCharArray();
+		char chararray1[]=tempWordOne.toCharArray();
+		char chararray2[]=tempWordTwo.toCharArray();
 		
 		if(chararray1.length!=chararray2.length){
 			return false;
@@ -60,9 +60,7 @@ public class Util {
 			}
 			
 		}
-		if(counter==chararray1.length)
-			return true;	
-		return false;
+			return (counter==chararray1.length);	
 	}
 /**
  * isAnagram method to find two number as anagram
@@ -132,9 +130,7 @@ public class Util {
 			
 			}
 		}
-		if(counter==2)
-			return true;
-		return false;
+		return (counter==2);
 	}
 /**
  * primeNumber method is extension of isPrime which give range of prime number
@@ -169,9 +165,9 @@ public class Util {
 		System.out.println("=======Anagram And Pallindrome Number=====");
 		for(int i=0;i<k;i++) {
 			for(int j=1;j<k;j++) {
-				if(primeNumberArray[i]!=primeNumberArray[j])
-					if(isAnagram(primeNumberArray[i], primeNumberArray[j]))
-						if(reverseNumber(primeNumberArray[i])==primeNumberArray[j])
+				if((primeNumberArray[i]!=primeNumberArray[j])
+				&&(isAnagram(primeNumberArray[i], primeNumberArray[j]))
+				&&(reverseNumber(primeNumberArray[i])==primeNumberArray[j]))
 							System.out.println(primeNumberArray[i]+" "+primeNumberArray[j]);
 			}
 		}
@@ -192,9 +188,7 @@ public class Util {
 				
 			}	
 		}
-		if(counter==characterArray.length/2)
-			return true;
-		return false;
+		return (counter==characterArray.length/2);
 	}
 /**
  * isPallindrome for integer, find number is pallindrome or not
@@ -210,9 +204,7 @@ public class Util {
 			temp=temp/10;
 			
 		}		
-		if(number==reverseNumber)
-			return true;
-		return false;
+		return (number==reverseNumber);
 	}
 /**
  * reversNumber method reverse the number
@@ -307,8 +299,9 @@ public static int reverseNumber(int number) {
 	public static String toBinary(int number) {
 		String binary="";
 		int num=0;
-		while(number!=0) {
-			if(number%2==0) {
+		int tempNumber=number;
+		while(tempNumber!=0) {
+			if(tempNumber%2==0) {
 				binary="0"+binary;
 				num=num*10+0;
 			}
@@ -317,13 +310,17 @@ public static int reverseNumber(int number) {
 				binary="1"+binary;
 				num=num*10+1;
 			}
-				number=number/2;
+			tempNumber=tempNumber/2;
 		
 		}
 		swapNimble(binary);	
 		return binary;
 	
 	}
+	/**
+	 * prints binary to decimal
+	 * @param binaryArrray
+	 */
 	public static void printBinaryTodecimal(int[] binaryArrray) {
 		int sum=0;
 		int bit=7;
@@ -336,6 +333,10 @@ public static int reverseNumber(int number) {
 		}
 		System.out.println("The decimal number="+sum);
 	}
+	/**
+	 * swapNimble method will swap 4 bits left to  4 right
+	 * @param binary
+	 */
 	public static void swapNimble(String binary) {
 		int[] binaryBitArray=new int[8];
 		int[] swapNimbelArray=new int[8];
